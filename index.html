@@ -8,9 +8,48 @@
 	<body>
 		<a-scene>
 		<!-- ↓↓↓ここから下に記述する↓↓↓ -->
+			<a-assets>
+				<img id="temple" src="/assets/temple_360.jpg"> 
+				<a-asset-item id="moon-obj" src="assets/moongirl.obj"></a-asset-item>
+				<a-asset-item id="moon-mtl" src="assets/moongirl.mtl"></a-asset-item>
+				<a-asset-item id="moon-png" src="assets/moongirl.png"></a-asset-item>
+			</a-assets>
 
+			<a-entity>
+				<a-entity position="-6.72 7.54 9.14" obj-model="obj: #moon-obj; mtl: #moon-mtl; png: #moon-png"></a-entity>
+				<a-animation
+					attribute="rotation"
+					dur="10000"
+					fill="forwards"
+					to="0 360 0"
+					repeat="indefinite"></a-animation>
+			</a-entity>
 
+			<a-octahedron position="1 5 -5" color="#FF926B" radius="2">
+				<a-animation attribute="rotation"
+	               dur="10000"
+	               fill="forwards"
+	               to="0 360 0"
+	               repeat="indefinite"></a-animation>
+			</a-octahedron>
+			<a-octahedron position="16 4 7" color="#FF69B4" radius="3">
+							<a-animation attribute="rotation"
+	               dur="10000"
+	               fill="forwards"
+	               to="0 360 0"
+	               repeat="indefinite"></a-animation>
 
+			</a-octahedron>
+			<a-octahedron position="1 -3 12" color="#CC0000" radius="4">
+							<a-animation attribute="rotation"
+	               dur="10000"
+	               fill="forwards"
+	               to="0 360 0"
+	               repeat="indefinite"></a-animation>
+
+			</a-octahedron>
+
+			<a-sky src="#temple"></a-sky> 
 		<!-- ↑↑↑ここから上に記述する↑↑↑ -->
     </a-scene>
 	</body>
